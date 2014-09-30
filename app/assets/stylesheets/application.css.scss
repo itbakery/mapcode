@@ -1,0 +1,93 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+html,body {width:100%;height:100%;margin:0;padding:0;}
+
+#map {
+    background:gray-lighter;display: block;
+    position:absolute;
+    height:auto;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    margin-top:50px;
+}
+
+pre.ui-coordinates {
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  padding:5px 10px;
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  font-size:11px;
+  line-height:18px;
+  border-radius:3px;
+}
+
+.menu-ui {
+  background:#fff;
+  position:absolute;
+  top:10px;right:10px;
+  z-index:100;
+  border-radius:3px;
+  width:120px;
+  border:1px solid rgba(0,0,0,0.4);
+}
+.menu-ui a {
+  font-size:13px;
+  color:#404040;
+  display:block;
+  margin:0;padding:0;
+  padding:10px;
+  text-decoration:none;
+  border-bottom:1px solid rgba(0,0,0,0.25);
+  text-align:center;
+}
+.menu-ui a:first-child {
+  border-radius:3px 3px 0 0;
+}
+.menu-ui a:last-child {
+  border:none;
+  border-radius:0 0 3px 3px;
+}
+.menu-ui a:hover {
+  background:#f8f8f8;
+  color:#404040;
+}
+.menu-ui a.active {
+  background:#3887BE;
+  color:#FFF;
+}
+.menu-ui a.active:hover {
+  background:#3074a4;
+}
+
+/* User sign in and sign forms. */
+.border-form-div {
+  max-width: 300px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.border-form-div .form-signin-heading,
+.border-form-div .checkbox {
+  margin-bottom: 10px;
+}
+.border-form-div input[type="text"],
+.border-form-div input[type="email"],
+.border-form-div input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eventmap</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= mapbox_js_api %>
+  <%= mapbox_css_api %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <%= render :partial => 'share/navtopbar' %>
+    <nav id='menu-ui' class='menu-ui'></nav>
+    <div id='map'> </div>
+    <pre id='coordinates' class='ui-coordinates'></pre>
+<script>
+
+</script>
+
+
+</button>
+</body>
+</html>

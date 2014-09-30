@@ -1,21 +1,60 @@
-<h2>Sign up</h2>
+<div class="panel panel-default">
+    <div class="panel-heading"> <strong class="">Sign up</strong>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div><%= f.label :username %><br />
-  <%= f.text_field :username, autofocus: true %></div>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+    </div>
+    <div class="panel-body">
 
 
-  <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+        <%= devise_error_messages! %>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "form-horizontal"}) do |f| %>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+            <div class="form-group">
+                <%= f.label :username, class: "col-sm-3 control-label" %>
+                <div class="col-sm-9">
+                    <%= f.text_field :username, autofocus: true, class: "form-control", placeholder: "Username" %>
+                </div>
+            </div>
 
-<%= render "devise/shared/links" %>
+
+            <div class="form-group">
+                <%= f.label :email, class: "col-sm-3 control-label" %>
+                <div class="col-sm-9">
+                    <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <%= f.label :password, class: "col-sm-3 control-label" %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %>
+                <div class="col-sm-9">
+                    <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password" %>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <%= f.label :password_confirmation, class: "col-sm-3 control-label" %>
+                <div class="col-sm-9">
+                    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Password Confirmation" %>
+                </div>
+            </div>
+
+
+
+
+            <div class="form-group last">
+                <div class="col-sm-offset-3 col-sm-9">
+                    <%= f.submit "Sign up", class: "btn btn-success btn-sm" %>
+                </div>
+            </div>
+
+        <% end %>
+
+    </div>
+    <div class="panel-footer">Not Registered? <%= render "devise/shared/links" %>
+
+
+</div>
+</div>
+

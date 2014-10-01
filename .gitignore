@@ -16,3 +16,4 @@
 /tmp
 
 /db/seeds.rb
+/config/mongoid.yml

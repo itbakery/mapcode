@@ -6,17 +6,45 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= mapbox_js_api %>
   <%= mapbox_css_api %>
+  <%= javascript_include_tag 'classie' %>
+  <%= javascript_include_tag 'holder' %>
+  <%= stylesheet_link_tag 'classie' %>
+  <%= stylesheet_link_tag 'postbox' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="cbp-spmenu-push" >
+
+
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s1" style="padding: 5px;">
+    <h4 class="text-center">What happen!!</h4>
+
+    <%= render :partial => 'share/postbox' %>
+</nav>
+
     <%= render :partial => 'share/navtopbar' %>
     <nav id='menu-ui' class='menu-ui'></nav>
     <div id='map'> </div>
     <pre id='coordinates' class='ui-coordinates'></pre>
+
+
 <script>
 
-</script>
+  var menuRight = document.getElementById( 'cbp-spmenu-s1' ),
+      menuLeft = document.getElementById( 'cbp-spmenu-s2' ),
+      map = document.getElementById('map'),
+      body = document.body;
 
+  showRight.onclick = function() {
+    classie.toggle( this, 'active' );
+    classie.toggle( menuRight, 'cbp-spmenu-open' );
+  };
+  showLeftPush.onclick = function() {
+      classie.toggle( this, 'active' );
+      classie.toggle( body, 'cbp-spmenu-push-toright' );
+      classie.toggle( map, 'cbp-map-spmenu-push-toright' );
+      classie.toggle( menuLeft, 'cbp-spmenu-open' );
+  };
+</script>
 
 </button>
 </body>

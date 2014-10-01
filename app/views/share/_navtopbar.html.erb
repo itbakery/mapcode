@@ -38,6 +38,11 @@
         <% end %>
           <li> <%= link_to "Twitter", user_omniauth_authorize_path(:twitter)  %> </li>
           <li> <%= link_to "Facebook", user_omniauth_authorize_path(:facebook)  %> </li>
+            <li>
+              <button id="showRight" type="button" class="btn btn-default" style="margin-top: 8px; margin-right: 5px;">
+                <span class="glyphicon glyphicon-align-justify"></span>
+              </button>
+            </li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>

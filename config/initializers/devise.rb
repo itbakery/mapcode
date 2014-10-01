@@ -263,6 +263,6 @@ Devise.setup do |config|
 
   require "omniauth-facebook"
   require "omniauth-twitter"
-  config.omniauth :facebook, "1540309136200648","ba0ddcdcd735cb0b8c8580c02c6602d5"
+  config.omniauth :facebook, "811007182285158","59e64bbb88ae6386a72dbe777bd4d2d9"
   config.omniauth :twitter, "Fim7FhNyJHrzRF6FL3JTiE52A","oIpWtlcko67SzM60zGlLeAEx4kn6skP18FoPzgxIPIMbRYZ72v"
 end

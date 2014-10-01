@@ -27,7 +27,7 @@ set :pty, true
 
 # Default value for :linked_files is []
 # set :linked_files, %w{config/database.yml}
-set :linked_files, %w{config/mongoid.yml db/seeds.rb}
+set :linked_files, %w{config/mongoid.yml db/seeds.rb config/boot.rb}
 
 # Default value for linked_dirs is []
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
@@ -57,6 +57,11 @@ namespace :deploy do
       #   execute :rake, 'cache:clear'
       # end
     end
+  end
+
+  desc "reload the database with seed data"
+  task :seed do
+    run "cd #{current_path}; bundle exec rake db:seed RAILS_ENV=#{rails_env}"
   end
 
 end

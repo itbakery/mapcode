@@ -68,11 +68,3 @@ test:
         max_retries: 1
         retry_interval: 0
 
-production:
-  sessions:
-    default:
-      database: <%= ENV['APP_NAME'] %>
-      hosts:
-        - <%="#{ENV['MONGODB_DB_HOST']}:#{ENV['MONGODB_DB_PORT']}" %>
-      username: <%= ENV['MONGODB_DB_USERNAME'] %>
-      password: <%= ENV['MONGODB_DB_PASSWORD'] %>
